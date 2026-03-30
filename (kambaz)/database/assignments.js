@@ -1,0 +1,17 @@
+export default [
+  { _id: "A101", title: "React Hello World", course: "RS101", availableDate: "Jan 10 at 12:00am", dueDate: "Jan 18 at 11:59pm", points: 100, description: "Build a Hello World React application and deploy to Vercel." },
+  { _id: "A102", title: "Component Lab", course: "RS101", availableDate: "Jan 18 at 12:00am", dueDate: "Jan 25 at 11:59pm", points: 100, description: "Build React components and practice props and state." },
+  { _id: "A103", title: "Hooks and State", course: "RS101", availableDate: "Jan 25 at 12:00am", dueDate: "Feb 1 at 11:59pm", points: 100, description: "Implement React hooks for state management." },
+  { _id: "A201", title: "HTML Portfolio", course: "RS102", availableDate: "Jan 10 at 12:00am", dueDate: "Jan 18 at 11:59pm", points: 100, description: "Build a personal portfolio page using HTML and CSS." },
+  { _id: "A202", title: "JavaScript Exercises", course: "RS102", availableDate: "Jan 18 at 12:00am", dueDate: "Jan 25 at 11:59pm", points: 100, description: "Complete JavaScript programming exercises." },
+  { _id: "A203", title: "REST API Project", course: "RS102", availableDate: "Jan 25 at 12:00am", dueDate: "Feb 1 at 11:59pm", points: 100, description: "Build a REST API using Node.js and Express." },
+  { _id: "A301", title: "SQL Lab", course: "RS103", availableDate: "Jan 10 at 12:00am", dueDate: "Jan 18 at 11:59pm", points: 100, description: "Write SQL queries for a sample database." },
+  { _id: "A302", title: "MongoDB CRUD", course: "RS103", availableDate: "Jan 18 at 12:00am", dueDate: "Jan 25 at 11:59pm", points: 100, description: "Implement CRUD operations using MongoDB." },
+  { _id: "A303", title: "Database Design Project", course: "RS103", availableDate: "Jan 25 at 12:00am", dueDate: "Feb 1 at 11:59pm", points: 100, description: "Design and normalize a relational database schema." },
+  { _id: "A401", title: "Sorting Implementation", course: "RS104", availableDate: "Jan 10 at 12:00am", dueDate: "Jan 18 at 11:59pm", points: 100, description: "Implement common sorting algorithms." },
+  { _id: "A402", title: "Graph Traversal", course: "RS104", availableDate: "Jan 18 at 12:00am", dueDate: "Jan 25 at 11:59pm", points: 100, description: "Implement BFS and DFS graph traversal algorithms." },
+  { _id: "A403", title: "Dynamic Programming Problems", course: "RS104", availableDate: "Jan 25 at 12:00am", dueDate: "Feb 1 at 11:59pm", points: 100, description: "Solve classic dynamic programming problems." },
+  { _id: "A501", title: "Data Exploration", course: "RS105", availableDate: "Jan 10 at 12:00am", dueDate: "Jan 18 at 11:59pm", points: 100, description: "Explore and visualize a dataset using Python." },
+  { _id: "A502", title: "Linear Regression Model", course: "RS105", availableDate: "Jan 18 at 12:00am", dueDate: "Jan 25 at 11:59pm", points: 100, description: "Build and evaluate a linear regression model." },
+  { _id: "A503", title: "Neural Network Lab", course: "RS105", availableDate: "Jan 25 at 12:00am", dueDate: "Feb 1 at 11:59pm", points: 100, description: "Build a simple neural network for classification." },
+];

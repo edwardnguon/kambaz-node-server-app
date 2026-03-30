@@ -1,0 +1,17 @@
+export default [
+  { _id: "M101", name: "Introduction to React", course: "RS101", lessons: [{ _id: "L101", name: "Getting Started with React" }, { _id: "L102", name: "Building Your First Component" }, { _id: "L103", name: "JSX Syntax" }] },
+  { _id: "M102", name: "State and Props", course: "RS101", lessons: [{ _id: "L104", name: "Managing Component State" }, { _id: "L105", name: "Passing Props Between Components" }] },
+  { _id: "M103", name: "Hooks and Context", course: "RS101", lessons: [{ _id: "L106", name: "useState Hook" }, { _id: "L107", name: "useEffect Hook" }, { _id: "L108", name: "Context API" }] },
+  { _id: "M201", name: "HTML and CSS Fundamentals", course: "RS102", lessons: [{ _id: "L201", name: "HTML Structure" }, { _id: "L202", name: "CSS Styling Basics" }, { _id: "L203", name: "Responsive Design" }] },
+  { _id: "M202", name: "JavaScript Essentials", course: "RS102", lessons: [{ _id: "L204", name: "Variables and Functions" }, { _id: "L205", name: "DOM Manipulation" }] },
+  { _id: "M203", name: "Node.js and Express", course: "RS102", lessons: [{ _id: "L206", name: "Setting Up Node.js" }, { _id: "L207", name: "Building REST APIs" }, { _id: "L208", name: "Middleware" }] },
+  { _id: "M301", name: "Relational Databases", course: "RS103", lessons: [{ _id: "L301", name: "Introduction to SQL" }, { _id: "L302", name: "Tables and Relationships" }, { _id: "L303", name: "Joins and Queries" }] },
+  { _id: "M302", name: "NoSQL Databases", course: "RS103", lessons: [{ _id: "L304", name: "Introduction to MongoDB" }, { _id: "L305", name: "CRUD Operations" }] },
+  { _id: "M303", name: "Database Design", course: "RS103", lessons: [{ _id: "L306", name: "Normalization" }, { _id: "L307", name: "ER Diagrams" }, { _id: "L308", name: "Indexing Strategies" }] },
+  { _id: "M401", name: "Sorting Algorithms", course: "RS104", lessons: [{ _id: "L401", name: "Bubble Sort" }, { _id: "L402", name: "Merge Sort" }, { _id: "L403", name: "Quick Sort" }] },
+  { _id: "M402", name: "Graph Algorithms", course: "RS104", lessons: [{ _id: "L404", name: "BFS and DFS" }, { _id: "L405", name: "Dijkstra's Algorithm" }] },
+  { _id: "M403", name: "Dynamic Programming", course: "RS104", lessons: [{ _id: "L406", name: "Memoization" }, { _id: "L407", name: "Bottom-Up DP" }, { _id: "L408", name: "Classic DP Problems" }] },
+  { _id: "M501", name: "Introduction to ML", course: "RS105", lessons: [{ _id: "L501", name: "What is Machine Learning?" }, { _id: "L502", name: "Types of Learning" }, { _id: "L503", name: "Data Preprocessing" }] },
+  { _id: "M502", name: "Supervised Learning", course: "RS105", lessons: [{ _id: "L504", name: "Linear Regression" }, { _id: "L505", name: "Classification" }] },
+  { _id: "M503", name: "Neural Networks", course: "RS105", lessons: [{ _id: "L506", name: "Perceptrons" }, { _id: "L507", name: "Backpropagation" }, { _id: "L508", name: "Deep Learning Basics" }] },
+];
