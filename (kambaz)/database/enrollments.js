@@ -22,4 +22,7 @@ export default [
   { _id: "21", user: "100", course: "RS103" },
   { _id: "22", user: "100", course: "RS104" },
   { _id: "23", user: "100", course: "RS105" },
+  { _id: "24", user: "999", course: "RS101" },
+  { _id: "25", user: "999", course: "RS102" },
+  { _id: "26", user: "999", course: "RS103" },
 ];

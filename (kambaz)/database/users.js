@@ -7,4 +7,5 @@ export default [
   { _id: "567", username: "charlie", password: "123", firstName: "Charlie", lastName: "Brown", email: "charlie@example.com", dob: "1998-09-12", loginId: "001234565S", section: "S102", role: "STUDENT", lastActivity: "2020-10-05", totalActivity: "05:23:34" },
   { _id: "789", username: "dave", password: "123", firstName: "Dave", lastName: "Miller", email: "dave@example.com", dob: "1999-11-30", loginId: "001234566S", section: "S102", role: "STUDENT", lastActivity: "2020-10-10", totalActivity: "08:23:34" },
   { _id: "890", username: "eve", password: "123", firstName: "Eve", lastName: "Davis", email: "eve@example.com", dob: "1994-04-24", loginId: "001234567S", section: "S102", role: "FACULTY", lastActivity: "2020-11-10", totalActivity: "20:23:34" },
+  { _id: "999", username: "iron_man", password: "stark123", firstName: "Tony", lastName: "Stark", email: "tony@stark.com", dob: "1970-05-29", loginId: "001234568S", section: "S101", role: "FACULTY", lastActivity: "2024-01-15", totalActivity: "40:00:00" },
 ];
