@@ -5,6 +5,7 @@ const assignmentSchema = new mongoose.Schema(
     title: String,
     course: String,
     availableDate: String,
+    availableUntil: String,
     dueDate: String,
     points: Number,
     description: String,
