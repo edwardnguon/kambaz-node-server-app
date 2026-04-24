@@ -8,12 +8,16 @@ import CourseRoutes from "./(kambaz)/courses/routes.js";
 import ModulesRoutes from "./(kambaz)/modules/routes.js";
 import AssignmentRoutes from "./(kambaz)/assignments/routes.js";
 import EnrollmentRoutes from "./(kambaz)/enrollments/routes.js";
+import QuizRoutes from "./(kambaz)/quizzes/routes.js";
+import QuizAttemptRoutes from "./(kambaz)/quizAttempts/routes.js";
+import bootstrapDemoUsers from "./bootstrapDemoUsers.js";
 import db from "./(kambaz)/database/index.js";
 import cors from "cors";
 import session from "express-session";
 
 const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kambaz";
-mongoose.connect(CONNECTION_STRING);
+await mongoose.connect(CONNECTION_STRING);
+await bootstrapDemoUsers();
 
 const app = express();
 app.use(
@@ -41,6 +45,8 @@ CourseRoutes(app, db);
 ModulesRoutes(app, db);
 AssignmentRoutes(app, db);
 EnrollmentRoutes(app, db);
+QuizRoutes(app, db);
+QuizAttemptRoutes(app, db);
 Lab5(app);
 Hello(app);
 app.listen(process.env.PORT || 4000);

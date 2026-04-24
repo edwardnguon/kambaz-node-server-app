@@ -24,5 +24,12 @@
   { "_id": "100-RS105", "user": "100", "course": "RS105" },
   { "_id": "999-RS101", "user": "999", "course": "RS101" },
   { "_id": "999-RS102", "user": "999", "course": "RS102" },
-  { "_id": "999-RS103", "user": "999", "course": "RS103" }
+  { "_id": "999-RS103", "user": "999", "course": "RS103" },
+  { "_id": "demo-student-001-RS101", "user": "demo-student-001", "course": "RS101" },
+  { "_id": "demo-student-001-RS102", "user": "demo-student-001", "course": "RS102" },
+  { "_id": "demo-faculty-001-RS101", "user": "demo-faculty-001", "course": "RS101" },
+  { "_id": "demo-faculty-001-RS102", "user": "demo-faculty-001", "course": "RS102" },
+  { "_id": "demo-faculty-001-RS103", "user": "demo-faculty-001", "course": "RS103" },
+  { "_id": "demo-faculty-001-RS104", "user": "demo-faculty-001", "course": "RS104" },
+  { "_id": "demo-faculty-001-RS105", "user": "demo-faculty-001", "course": "RS105" }
 ]
