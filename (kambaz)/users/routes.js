@@ -1,4 +1,5 @@
 import UsersDao from "./dao.js";
+import { resolveCurrentUser } from "./currentUser.js";
 export default function UserRoutes(app, db) {
   const dao = UsersDao(db);
   const createUser = async (req, res) => {
@@ -68,12 +69,13 @@ export default function UserRoutes(app, db) {
     });
   };
   const profile = (req, res) => {
-    const currentUser = req.session["currentUser"];
-    if (!currentUser) {
-      res.sendStatus(401);
-      return;
-    }
-    res.json(currentUser);
+    resolveCurrentUser(req).then((currentUser) => {
+      if (!currentUser) {
+        res.sendStatus(401);
+        return;
+      }
+      res.json(currentUser);
+    });
   };
   app.post("/api/users", createUser);
   app.get("/api/users", findAllUsers);

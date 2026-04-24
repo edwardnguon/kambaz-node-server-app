@@ -1,5 +1,6 @@
 import CoursesDao from "./dao.js";
 import EnrollmentsDao from "../enrollments/dao.js";
+import { resolveCurrentUser } from "../users/currentUser.js";
 export default function CourseRoutes(app, db) {
   const dao = CoursesDao(db);
   const enrollmentsDao = EnrollmentsDao(db);
@@ -10,7 +11,7 @@ export default function CourseRoutes(app, db) {
   const findCoursesForEnrolledUser = async (req, res) => {
     let { userId } = req.params;
     if (userId === "current") {
-      const currentUser = req.session["currentUser"];
+      const currentUser = await resolveCurrentUser(req);
       if (!currentUser) {
         res.sendStatus(401);
         return;
@@ -21,7 +22,7 @@ export default function CourseRoutes(app, db) {
     res.json(courses);
   };
   const createCourse = async (req, res) => {
-    const currentUser = req.session["currentUser"];
+    const currentUser = await resolveCurrentUser(req);
     if (!currentUser) {
       res.sendStatus(401);
       return;
@@ -50,7 +51,7 @@ export default function CourseRoutes(app, db) {
   const enrollUserInCourse = async (req, res) => {
     let { uid, cid } = req.params;
     if (uid === "current") {
-      const currentUser = req.session["currentUser"];
+      const currentUser = await resolveCurrentUser(req);
       if (!currentUser) {
         res.sendStatus(401);
         return;
@@ -63,7 +64,7 @@ export default function CourseRoutes(app, db) {
   const unenrollUserFromCourse = async (req, res) => {
     let { uid, cid } = req.params;
     if (uid === "current") {
-      const currentUser = req.session["currentUser"];
+      const currentUser = await resolveCurrentUser(req);
       if (!currentUser) {
         res.sendStatus(401);
         return;

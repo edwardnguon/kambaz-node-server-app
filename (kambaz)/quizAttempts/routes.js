@@ -1,5 +1,6 @@
 import QuizAttemptsDao from "./dao.js";
 import QuizzesDao from "../quizzes/dao.js";
+import { resolveCurrentUser } from "../users/currentUser.js";
 
 export default function QuizAttemptRoutes(app, db) {
   const attemptsDao = QuizAttemptsDao();
@@ -8,7 +9,8 @@ export default function QuizAttemptRoutes(app, db) {
   // Get latest attempt for a quiz by current user
   const getLatestAttempt = async (req, res) => {
     const { quizId } = req.params;
-    const userId = req.session?.currentUser?._id;
+    const currentUser = await resolveCurrentUser(req);
+    const userId = currentUser?._id;
     if (!userId) {
       return res.status(401).json({ error: "Not authenticated" });
     }
@@ -19,7 +21,8 @@ export default function QuizAttemptRoutes(app, db) {
   // Get all attempts for a quiz by current user
   const getAttempts = async (req, res) => {
     const { quizId } = req.params;
-    const userId = req.session?.currentUser?._id;
+    const currentUser = await resolveCurrentUser(req);
+    const userId = currentUser?._id;
     if (!userId) {
       return res.status(401).json({ error: "Not authenticated" });
     }
@@ -30,7 +33,8 @@ export default function QuizAttemptRoutes(app, db) {
   // Get attempt count for a quiz by current user
   const getAttemptCount = async (req, res) => {
     const { quizId } = req.params;
-    const userId = req.session?.currentUser?._id;
+    const currentUser = await resolveCurrentUser(req);
+    const userId = currentUser?._id;
     if (!userId) {
       return res.status(401).json({ error: "Not authenticated" });
     }
@@ -41,7 +45,8 @@ export default function QuizAttemptRoutes(app, db) {
   // Start a new attempt
   const startAttempt = async (req, res) => {
     const { quizId } = req.params;
-    const userId = req.session?.currentUser?._id;
+    const currentUser = await resolveCurrentUser(req);
+    const userId = currentUser?._id;
     if (!userId) {
       return res.status(401).json({ error: "Not authenticated" });
     }
@@ -68,7 +73,8 @@ export default function QuizAttemptRoutes(app, db) {
   const submitAttempt = async (req, res) => {
     const { attemptId } = req.params;
     const { answers } = req.body;
-    const userId = req.session?.currentUser?._id;
+    const currentUser = await resolveCurrentUser(req);
+    const userId = currentUser?._id;
     if (!userId) {
       return res.status(401).json({ error: "Not authenticated" });
     }
