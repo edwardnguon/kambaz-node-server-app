@@ -1,6 +1,11 @@
 import UserModel from "./(kambaz)/users/model.js";
 import EnrollmentModel from "./(kambaz)/enrollments/model.js";
 import CourseModel from "./(kambaz)/courses/model.js";
+import fs from "fs";
+
+const BASE_COURSES = JSON.parse(
+  fs.readFileSync(new URL("./(kambaz)/database/courses_mongo.json", import.meta.url), "utf8")
+);
 
 const DEMO_USERS = [
   {
@@ -28,6 +33,14 @@ const DEMO_USERS = [
 ];
 
 export default async function bootstrapDemoUsers() {
+  for (const course of BASE_COURSES) {
+    await CourseModel.updateOne(
+      { _id: course._id },
+      { $setOnInsert: course },
+      { upsert: true }
+    );
+  }
+
   const courses = await CourseModel.find({}, { _id: 1 }).lean();
   const courseIds = courses.map((course) => course._id);
   const studentCourseIds = courseIds.slice(0, 2);
